@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+  <style> 
+    .calculator {
+      width: 250px;
+      padding: 250pxlbackground-color: rgb(196, 196, 225);
+      background-color: #867f99;
+      border: 50px solid #12e4e4e8;
+    }
+
+    .calculator input[type="button"] {
+      width: 80px;
+      height: 80px
+      margin: 10px; <background-color:text-rendering: ;
+      font-size: 30px;:
+    }
+    
+  </style>
+  
+  
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" >
+    <input type="button" value="1" onclick="concatenarParametros('1')">
+    <input type="button" value="2" onclick="concatenarParametros('2')">
+    <input type="button" value="3" onclick="concatenarParametros('3')">
+    <input type="button" value="4" onclick="concatenarParametros('4')">
+    <input type="button" value="5" onclick="concatenarParametros('5')">
+    <input type="button" value="6" onclick="concatenarParametros('6')">
+    <input type="button" value="7" onclick="concatenarParametros('7')">
+    <input type="button" value="8" onclick="concatenarParametros('8')">
+    <input type="button" value="9" onclick="concatenarParametros('9')">
+    <input type="button" value="0" onclick="concatenarParametros('0')">
+    <input type="button" value="/" onclick="concatenarParametros('/')">
+    <input type="button" value="*" onclick="concatenarParametros('*')">
+    <input type="button" value="-" onclick="concatenarParametros('-')">
+    <input type="button" value="+" onclick="concatenarParametros('+')">
+    <input type="button" value="%" onclick="concatenarParametros('%')">
+    <input type="button" value="C" onclick="limpiar()">
+    <input type="button" value="=" onclick="CALCULEMEESTA()">
+  </div>
+
+  <script>
+    function concatenarParametros(parametroEntrante) {
+      document.getElementById('result').value += parametroEntrante;
+    }
+
+    function limpiar() {
+      document.getElementById('result').value = '';
+    }
+
+    function CALCULEMEESTA() {
+      var result = eval(document.getElementById('result').value);
+      document.getElementById('result').value = result;
+    }
+  </script>
+</body>
+</html>
